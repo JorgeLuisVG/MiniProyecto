@@ -1,6 +1,4 @@
-// Codigo Aqui
-
-public class Usuario
+public class Usuario // usuario
 {
     public string ID { get; set; }
     public string Nombre { get; set; }
@@ -12,7 +10,7 @@ public class Usuario
     }
 }
 
-public class Amistad
+public class Amistad // Arista
 {
     public string DestinoID { get; set; }
 
@@ -22,9 +20,7 @@ public class Amistad
     }
 }
 
-
-
-public class RedSocial
+public class RedSocial // Operacion de la red social
 {
     private Dictionary<string, Usuario> usuarios;
     private Dictionary<string, List<AristaAmistad>> listaAdyacencia;
@@ -67,7 +63,6 @@ public class RedSocial
         return null;
     }
 
-    // Agregar una amistad (aristas en ambas direcciones)
     public bool AgregarAmistad(string id1, string id2)
     {
         id1 = id1;
@@ -89,7 +84,6 @@ public class RedSocial
         return true;
     }
 
-    // Verificar si dos usuarios son amigos
     public bool ExisteAmistad(string id1, string id2)
     {
         if (!listaAdyacencia.ContainsKey(id1) ||
@@ -105,7 +99,6 @@ public class RedSocial
         return false;
     }
 
-    // Obtener los amigos directos
     public List<Usuario> ObtenerAmigos(string id)
     {
         List<Usuario> amigos = new List<Usuario>();
@@ -234,7 +227,7 @@ public class RedSocial
     }
 }
 
-static class Programa
+static class Programa // Poner aqui todo lo del uso del programa
 {
     static int TryCatchInt(List<int> ListaOpciones, string Texto)
     {
